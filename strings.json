@@ -1,0 +1,42 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Sorgenia login",
+        "description": "Enter your Sorgenia email and the value of the password field in the POST /sorgenia/V5/login Network payload. If it differs from the password typed on the website, use the payload value. API settings are read from /config/sorgenia.yaml. The password is not saved.",
+        "data": {
+          "username": "Sorgenia username",
+          "password": "Password value from /sorgenia/V5/login payload"
+        }
+      },
+      "otp": {
+        "title": "Verify Sorgenia login",
+        "description": "We sent the one-time code to the validated phone {phone}. Enter it here.",
+        "data": {
+          "otp": "One-time code"
+        }
+      },
+      "reconfigure": {
+        "title": "Reconnect Sorgenia",
+        "description": "Enter your Sorgenia email and the value of the password field in the POST /sorgenia/V5/login Network payload. If it differs from the password typed on the website, use the payload value. API settings are read from /config/sorgenia.yaml. The password is not saved.",
+        "data": {
+          "username": "Sorgenia username",
+          "password": "Password value from /sorgenia/V5/login payload"
+        }
+      }
+    },
+    "error": {
+      "login_failed": "Sorgenia login or OTP request failed. Check the username and password.",
+      "login_bad_request": "Sorgenia rejected the login data (HTTP 400). Check the email and use the password value from the POST /sorgenia/V5/login Network payload, as described in the README.",
+      "otp_request_bad_request": "Sorgenia rejected the OTP request (HTTP 400). Check the validated phone and account data.",
+      "api_auth_failed": "Sorgenia returned HTTP 401/403. Check the login Basic value and API subscription key in /config/sorgenia.yaml.",
+      "otp_failed": "OTP verification failed. Check the code and try again.",
+      "local_config_missing": "Create /config/sorgenia.yaml first, then try again.",
+      "local_config_invalid": "Check the YAML fields in /config/sorgenia.yaml."
+    },
+    "abort": {
+      "reauth_successful": "Signed in again. The Sorgenia token has been renewed.",
+      "reconfigure_successful": "Sorgenia reconnected."
+    }
+  }
+}
