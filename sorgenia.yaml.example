@@ -1,0 +1,10 @@
+# Copia questo file come /config/sorgenia.yaml in Home Assistant.
+# Sostituisci i valori tra virgolette con i tuoi dati. Non inviare il file in chat.
+name: Sorgenia
+client_code: "INSERISCI_CODICE_CLIENTE"
+electricity_pr_code: "INSERISCI_PR_LUCE"
+gas_pr_code: "INSERISCI_PR_GAS"
+authorization_basic: "Basic INCOLLA_VALORE_COMPLETO"
+subscription_key: "INCOLLA_CHIAVE_DI_SOTTOSCRIZIONE_API"
+source_channel: "MYS"
+scan_interval: 360
